@@ -1,5 +1,8 @@
 prometheus:
   prometheusSpec:
+    scrapeInterval: 30s
+    scrapeTimeout: 10s
+    evaluationInterval: 30s
     storageSpec:
       volumeClaimTemplate:
         spec:
@@ -26,3 +29,4 @@ alertmanager:
           resources:
             requests:
               storage: 10Gi
+
