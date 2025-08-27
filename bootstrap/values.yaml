@@ -1,0 +1,14 @@
+kps:
+  namespace: monitoring
+  repoURL: https://prometheus-community.github.io/helm-charts
+  chart: kube-prometheus-stack
+  version: 67.7.0
+  values: |
+    grafana:
+      enabled:
+        type: LoadBalancer
+    prometheus:
+      prometheusSpec:
+        retention: 7d
+    alertmanger:
+      enabled: true
